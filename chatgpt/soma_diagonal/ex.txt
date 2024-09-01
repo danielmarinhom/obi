@@ -1,0 +1,46 @@
+Exercício 2: Soma dos Elementos na Diagonal Secundária
+Descrição:
+Dada uma matriz 
+𝑛
+×
+𝑛
+n×n com números inteiros, escreva um programa que calcule a soma dos elementos na diagonal secundária.
+
+Entrada:
+
+A primeira linha contém um número inteiro 
+𝑛
+n (1 ≤ 
+𝑛
+n ≤ 100), o tamanho da matriz.
+As próximas 
+𝑛
+n linhas contêm 
+𝑛
+n inteiros cada uma, representando a matriz.
+Saída:
+
+Um único número inteiro, a soma dos elementos na diagonal secundária.
+Exemplo 1:
+
+Entrada:
+
+3
+1 2 3
+4 5 6
+7 8 9
+Saída:
+
+15
+Exemplo 2:
+
+Entrada:
+
+4
+1 2 3 4
+5 6 7 8
+9 10 11 12
+13 14 15 16
+Saída:
+
+34

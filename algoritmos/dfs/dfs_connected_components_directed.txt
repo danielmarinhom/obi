@@ -1,0 +1,131 @@
+passo a passo:
+1-primeira passagem do dfs para obter a ordem de finalizacao, que eh importante para processar os vertices na ordem correta na segunda passagem
+2-transpor o grafo, 
+3-segunda passagem de dfs no grafo transposto ((u,v) -> (v,u)),
+
+
+
+
+
+Intuito Final
+Encontrar SCCs significa identificar subgrupos de vértices em um grafo direcionado onde cada vértice é acessível a partir de qualquer outro vértice no mesmo subgrupo. Isso é útil para entender a estrutura e as dependências do grafo.
+
+Passo a Passo
+Vamos dividir o processo em três etapas principais:
+
+Primeira Passagem de DFS para Obter a Ordem de Finalização
+Transpor o Grafo
+Segunda Passagem de DFS no Grafo Transposto
+1. Primeira Passagem de DFS para Obter a Ordem de Finalização
+Objetivo:
+Realizar uma busca em profundidade (DFS) no grafo original para determinar a ordem de finalização dos vértices. A ordem de finalização é importante porque nos ajudará a processar os vértices na ordem correta na segunda passagem de DFS.
+
+Passos:
+
+Inicialize uma lista para marcar os vértices visitados.
+Inicialize uma pilha para armazenar a ordem de finalização dos vértices.
+Para cada vértice não visitado, realize a DFS e, após visitar todos os vizinhos, adicione o vértice à pilha.
+Detalhamento:
+
+Marcamos o vértice como visitado.
+Para cada vizinho do vértice atual, se o vizinho não foi visitado, chamamos a DFS recursivamente.
+Depois de visitar todos os vizinhos, adicionamos o vértice à pilha.
+2. Transpor o Grafo
+Objetivo:
+Criar um novo grafo onde todas as arestas são invertidas. Isso nos permitirá explorar o grafo na direção oposta.
+
+Passos:
+
+Inicialize um novo grafo vazio para a transposição.
+Para cada aresta no grafo original, adicione a aresta invertida ao novo grafo.
+Detalhamento:
+
+Para cada aresta (u, v) no grafo original, adicionamos uma aresta (v, u) no grafo transposto.
+3. Segunda Passagem de DFS no Grafo Transposto
+Objetivo:
+Usar a ordem de finalização obtida na primeira passagem para realizar DFS no grafo transposto. Isso nos permitirá encontrar todos os SCCs.
+
+Passos:
+
+Inicialize uma nova lista para marcar os vértices visitados no grafo transposto.
+Inicialize uma lista para armazenar os SCCs.
+Para cada vértice na ordem de finalização (da pilha), se o vértice não foi visitado, realize uma DFS no grafo transposto e adicione o componente encontrado à lista de SCCs.
+Detalhamento:
+
+Para cada vértice na pilha (começando do topo), se o vértice não foi visitado, realizamos uma DFS no grafo transposto.
+Coletamos todos os vértices alcançados na DFS em um componente.
+Adicionamos o componente à lista de SCCs.
+Explicação Detalhada em Palavras
+Preparação e Primeira Passagem de DFS:
+
+Inicializamos uma lista visited para marcar se um vértice foi visitado.
+Inicializamos uma lista stack para armazenar a ordem de finalização dos vértices.
+Para cada vértice no grafo, se ele não foi visitado, chamamos uma função de DFS.
+Na DFS, marcamos o vértice como visitado e chamamos recursivamente a DFS para cada vizinho não visitado.
+Após visitar todos os vizinhos, adicionamos o vértice à pilha stack.
+Transposição do Grafo:
+
+Criamos um novo grafo transposed_graph.
+Para cada aresta no grafo original, adicionamos a aresta invertida no transposed_graph.
+Segunda Passagem de DFS:
+
+Inicializamos uma nova lista visited para o grafo transposto.
+Inicializamos uma lista sccs para armazenar os SCCs.
+Enquanto a pilha stack não estiver vazia, pegamos o vértice do topo.
+Se o vértice não foi visitado, realizamos uma DFS no grafo transposto, coletando todos os vértices do componente.
+Adicionamos o componente à lista sccs.
+
+
+
+
+
+
+
+--------------
+
+
+Passos e Lógica do Algoritmo
+DFS para encontrar a ordem de finalização:
+
+Realizamos uma DFS no grafo original.
+Durante a DFS, quando todos os vizinhos de um vértice são visitados, adicionamos o vértice a uma pilha.
+Ordem de finalização: A ordem em que os vértices são adicionados à pilha é chamada de ordem de finalização. É uma forma de registrar a ordem inversa de visitação dos vértices. A pilha ajuda a garantir que quando um vértice é "finalizado" (isto é, quando todos os seus vizinhos foram explorados), ele é empilhado.
+Transpor o grafo:
+
+A transposição de um grafo é um novo grafo onde todas as arestas são invertidas. Se havia uma aresta de u para v no grafo original, no grafo transposto haverá uma aresta de v para u.
+A transposição é importante porque, no grafo transposto, todas as conexões internas dos SCCs se tornam conexões externas e vice-versa.
+DFS no grafo transposto usando a ordem de finalização:
+
+Realizamos DFS no grafo transposto usando a ordem dos vértices que está na pilha (ou seja, a ordem de finalização).
+Por que a ordem de finalização funciona?: Quando um vértice é retirado da pilha e a DFS é realizada no grafo transposto, garantimos que todos os vértices alcançáveis a partir dele (no grafo transposto) pertencem ao mesmo SCC. Isso porque estamos processando os vértices na ordem inversa de suas "finalizações", garantindo que todos os vértices que poderiam ser alcançados de um dado vértice no grafo original sejam processados em conjunto no grafo transposto.
+Exemplo Detalhado
+Considere o seguinte grafo:
+
+Copy code
+1 → 2 → 3
+↑    ↓
+5 ← 4
+Passos:
+
+DFS no grafo original para obter a ordem de finalização:
+
+Começando do vértice 1: visitamos 1 → 2 → 3.
+Vértice 3 não tem vizinhos não visitados, então empilhamos 3.
+Voltamos para 2 e visitamos 4.
+De 4, visitamos 5.
+Empilhamos 5, 4, 2.
+Finalmente empilhamos 1.
+Ordem de finalização na pilha: [3, 5, 4, 2, 1].
+Transpor o grafo:
+
+Copy code
+1 ← 2 ← 3
+↓    ↑
+5 → 4
+DFS no grafo transposto usando a ordem de finalização:
+
+Removemos o vértice do topo da pilha (1) e realizamos DFS: encontramos {1}.
+Removemos o próximo vértice (2) e realizamos DFS: encontramos {2, 1}.
+Continuamos esse processo para todos os vértices na pilha. Quando pegamos 3, encontramos {3}, e assim por diante.
+No final, obtemos os SCCs: {1}, {2, 1}, {3}, {5}, {4}.
+

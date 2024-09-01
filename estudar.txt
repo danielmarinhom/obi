@@ -1,0 +1,93 @@
+**ja estudei:
+dfs
+dfs componentes fortemente conectados
+bfs
+union-find
+verificacao de ciclos em grafos direcionados e nao-direcionados (bfs/union-find)
+kruskal
+bellman-ford
+floyd-warshall
+GCD, LCM
+crivo de eratostenes
+trie
+analise de padroes em strings
+kmp
+rod cutting
+busca binaria
+
+buscar linear
+matrix multiplication
+0/1 knapsack
+tsp
+sum of subsets
+graph coloring
+hamiltonian cycle
+subsequencia comum mais longa
+algoritmo de manacher
+branch and bound
+
+REVISAO:
+DAG em dfs (topological order)
+LCA
+bfs
+
+**restantes:
+kmp
+segment tree
+fenwick tree
+busca binaria
+subsequencia comum mais longa
+subset sum
+knapsack
+convex hull
+determinacao de pontos dentro de um poligono
+kmp
+aho-corasick
+#branch and bound
+bitmask dp
+algoritmo de manacher
+meet in the middle
+busca de vizinhanca
+
+
+videos:
+https://www.youtube.com/watch?v=aHZW7TuY_yo&ab_channel=NeetCodeIO
+https://www.youtube.com/watch?v=25RdTDN2Trg&ab_channel=Sahil%26Sarra
+https://www.youtube.com/watch?v=oBt53YbR9Kk&ab_channel=freeCodeCamp.org
+https://www.youtube.com/results?search_query=Longest+Substring+Without+Repeating+Characters
+
+ViveKanand
+Tushar Roy
+Abdul Bari
+NeetCode
+
+dp:
+
+Problema da Mochila (Knapsack)
+Knapsack 0/1: Decidir quais itens incluir em uma mochila para maximizar o valor total sem exceder a capacidade.
+Knapsack Fracionário: Permite dividir itens e leva frações deles para maximizar o valor total.
+
+Problema da Subsequência Comum Máxima (LCS)
+Encontrar a subsequência comum mais longa entre duas sequências.
+
+Problema do Caminho Mínimo
+Determinar se existe um subconjunto de números que soma a um valor específico.
+
+Problema do Troco (Coin Change)
+Encontrar o número mínimo de moedas necessárias para formar um valor específico.
+
+Problema da Palíndromo Máximo
+Encontrar o comprimento do maior palíndromo subsequente em uma string.
+
+Problema de Corte de Hastes (Rod Cutting)
+Determinar a melhor maneira de cortar uma haste para maximizar o valor total.
+
+Problema de Edit Distance (Distância de Edição)
+Calcular o número mínimo de operações (inserções, exclusões, substituições) necessárias para transformar uma string em outra.
+
+Problema da Rota de Custo Mínimo (Matrix Chain Multiplication)
+Encontrar a ordem ótima de multiplicar uma cadeia de matrizes para minimizar o custo de multiplicação.
+
+Problema da Subsequência Comum Máxima (Longest Common Subsequence - LCS)
+Encontrar a subsequência comum mais longa entre duas sequências.
+Problema da Soma de Subconjuntos (Subset Sum)

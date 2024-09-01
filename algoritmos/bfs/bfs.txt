@@ -1,0 +1,52 @@
+#aplicado em exercicios que envolvem encontrar o caminho mais curto entre dois pontos
+#explora todos os vizinhos de um vertice antes de explorar os vizinhos deles
+
+def bfs(grafo, comeco, final):
+    visitados = set((comeco))
+    fila = [(comeco, 0)] #comeco, distancia
+    
+    while fila:
+        atual, distancia = fila.pop(0)
+        if atual == final:
+            return distancia
+        if 0 <= atual <= n and atual not in visitados:
+            continuacao...
+            visitados.add((atual))
+            fila.add((atual, distancia+1))
+
+#comeca recebendo uma matriz (grafo), posicao inicial e final
+#define um set dos visitados que comeca valendo a posicao inicial
+#define a fila dos vertices a serem visitados e a distancia atual entre a posicao inicial e ele
+#inicia um loop while que roda enquanto estiver elemento na fila
+#define a posicao final e a distancia como o primeiro elemento removido da fila
+#verifica se a posicao final eh igual a inicial e retorna a distancia caso verdadeiro
+#verifica se a posicao atual esta nos limites do grafo e se nao esta no set dos visitados
+#adiciona a posicao atual para os visitados 
+#adiciona a posicao atual e distancia+1 para a fila
+
+exemplo:
+def bfs(graph, n, m):
+  #esquerda, direita, cima, baixo
+  directions = [(0, 1), (0, -1), (1, 0), (-1, 0)]
+  visited = set((0, 0))
+  queue = [(0, 0, 0)]
+  while queue:
+    x, y, distancia = queue.pop(0)
+
+    if x == n-1 and y == m-1:
+      return distancia
+
+    for dx, dy in directions:
+      ax, ay = x + dx, y + dy
+      if (0 <= ax < n and 0 <= ay < m and graph[ax][ay] == 0) and (ax, ay) not in visited:
+        visited.add((ax, ay))
+        queue.append((ax, ay, distancia+1))
+  return -1
+
+passo a passo:
+1-inicializar fila e lista visitados
+2-loop while para a fila
+3-pop(0)
+4-verificar se chegou no objetivo
+5-adicionar o vizinho a fila e o proprio elemento aos visitados com distancia+1
+6-retornar distancia

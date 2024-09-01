@@ -1,0 +1,50 @@
+usado quando se tem um conjunto de recursos limitados e eh preciso decidir como alocar esses recursos para MAXIMIZAR um objetivo
+otimizacao de valor dado um conjunto de restricoes
+otimizacao eh trabalhada em cima do valor total dos itens selecionados
+
+pode funcionar bem caso seja necessario encontrar a melhor forma de usar a capacidade de recursos para atingir um objetivo dentro de um grafo
+no caso dos grafos pode ser usado ao lado de bfs para calcular o valor maximo de um subconjunto por exemplo
+ 
+
+
+
+
+
+
+
+como por exemplo nesse exercicio:
+
+uma pessoa tem uma mochila com capacidade maxima limitada e deseja maximizar o valor total dos itens que pode enviar numa viagem
+cada item tem um valor e um peso associado, a mochila pode carregar ate um certo peso maximo e voce precisa decidir quais itens incluir para maximizar o valor total sem exceder o peso maximo
+
+entrada:
+um inteiro w que representa o peso maximo da mochila
+um inteiro n que representa o numero total de itens disponiveis
+uma lista de n itens onde cada item eh representado por dois inteiros: o peso do item e o valor do item
+
+saida:
+o valor maximo que pode ser obtido ao escolher os itens para a mochila sem exceder a capacidade maxima
+exemplo de entrada:
+10
+4
+2 3
+3 4
+4 5
+5 8
+saida esperada:
+12
+
+solucao:
+definir a funcao do knapsack recebendo a capacidade maxima e os itens
+definir a tabela do valor maximo onde a tabela[i] representa o maximo que pode ser obtido com uma mochila de capacidade i
+itera sobre o peso e valor nos itens:
+  itera i comecando pela capacidade indo ate peso-1 indo de -1:
+    a tabela de i recebe o valor maximo dea tabela de i, tabela i-peso+valor
+retorna tabela[capacidade]
+
+
+passo a passo:
+1-receber os itens, capacidade maxima, numero de itens
+2-definir matriz DP
+3-itera sobre o item atual para verificar o valor maximo com o item atual caso ele esteja dentro do limite
+4-retorna dp[n][maximo]

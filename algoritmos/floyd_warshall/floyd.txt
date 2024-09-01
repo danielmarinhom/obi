@@ -1,0 +1,32 @@
+o floyd eh um algoritmo usado para calcular a menor distancia entre pares de vertices em um grafo DIRECIONADO ou NAO mas ponderado
+nele os pesos das arestas podem ser positivos ou negativos, mas SEM ciclos negativos
+o algoritmo deve ser usado quando se precisa do caminho mais curto entre todos os pares de vertices
+
+
+
+comeca recebendo um grafo como parametro
+define uma variavel V que recebe o tamanho do grafo (len)
+inicializa uma matriz de distancias com os valores do grafo (dist = [[float('inf')] * V for _ in range(V)])
+define um for que roda para V, e define dist[i][i] como 0, pois a distancia de qualquer vertice para ele mesmo eh 0
+define 2 for aninhados para V, dentro do segundo for, verifica se i == j
+  caso positivo, a distancia do elemento atual sera igual a 0 (dist[i][j] = 0)
+  caso negativo e caso grafo[i][j] != 0, a distancia do elemento atual eh igual ao elemento atual do grafo (dist[i][j] = grafo[i][j])
+#a logica desses 2 for aninhado eh verificar se ele vai verificar a distancia entre o proprio vertice, dist[i][i] representa a distancia pro mesmo vertice
+#caso ele nao esteja nesse erro de logica (verificar a distancia entre o vertice para ele mesmo), ele definira a distancia do elemento de dist como sendo a do mesmo elemento so que do grafo
+
+define 3 for aninhados para V (iteradores: k, i, j), dentro do for j verifica se dist[i][j] > dist[i][k] + dist[k][j]
+  caso positivo, dist[i][j] = dist[i][k] + dist[k][j]
+#o k serve como um intermediario
+#o if verifica se o caminho de i para j via k eh mais curto do que o caminho conhecido atualmente de i para j
+#dist[i][k] eh a distancia mais curta de i para k
+#dist[k][j] eh a distancia mais curta de k para j 
+#se a soma dessas duas distancias for menor que a distancia conhecida, atualizamos ela
+retorna as distancias ou a distancia especifica
+
+passo a passo:
+1-define a matriz de distancias com n infinitos (colunas) por n linhas
+2-atribui 0 para diagonal principal
+3-atribui w para [u][v] numa iteracao do grafo
+4-roda 3 for
+5-caso [i][j] > [i][k] + [k][j]   ->   [i][j] = [i][k]+[k][j]
+6-retorna as distancias

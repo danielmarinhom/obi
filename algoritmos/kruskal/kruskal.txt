@@ -1,0 +1,59 @@
+#encontra a arvore geradora minima (MST)
+#em problemas que cada aresta que liga dois vertices tem um peso
+#em problemas que eh necessario conectar todas as localizacoes minimizando o custo sem haver um ciclo (determinar conexoes entre vertices sem repeticao)
+#usado em grafos nao direcionados (bilateral)
+
+def find(x):
+    if parent[x] != x:
+        parent[x] = find(parent[x])
+    return parent[x]
+
+def union(a,b):
+    rootA = find(a)
+    rootB = find(b)
+    if rootA != rootB:
+        if rootA > rootB:
+            parent[rootB] = rootA
+        else:
+            parent[rootA] = rootB
+            
+def kruskal(arestas, num_vertices):
+    arestas.sort(key=lambda x: x[2])
+    mst = []
+    mst_weight = 0
+    for u, v, weight in edges:
+        # Verifica se u e v estão no mesmo conjunto
+        if find(u) != find(v):
+            # Se não estiverem, adiciona a aresta à MST e une os conjuntos
+            union(u, v)
+            mst.append((u, v, weight))
+            mst_weight += weight
+            # Se a MST tiver V-1 arestas, podemos parar
+            if len(mst) == num_vertices - 1:
+                break
+    
+    return mst, mst_weight
+
+#define uma variavel para manter controle sobre a hierarquia dos vertices que tem o tamanho do grafo, o pai de i -> parent[i]
+
+#funcao find:
+#passa um elemento x como parametro
+#verifica se x nao eh pai dele mesmo, caso verdadeiro, ele acha o pai dele por meio de recursao ate o novo x se tornar o pai dele mesmo, e quando acontecer, retorna esse valor
+#funcao union:a
+#passa dois elementos como parametro, A e B
+#define a raiz (os pais) de A e B
+#verifica se a raiz deles sao diferentes, caso verdadeiro:
+  #verifica se a raiz de A > raiz de B, caso verdadeiro: o pai de raiz B = raiz de A
+  #verifica se a raiz de A < raiz de B, caso verdadeiro: o pai de raiz A = raiz de B
+
+#funcao kruskal:
+#recebe as arestas e o numero de vertices como parametro
+#sorteia as arestas com base numa chave do indice que diz respeito ao peso
+#define mst como uma lista vazia e mst_weight como 0
+#define um loop for que itera sobre o primeiro elemento, segundo elemento, peso da aresta, dentro das arestas:
+#verifica se o primeiro elemento e o segundo elemento da aresta nao estao no mesmo conjunto, se verdadeiro:
+  #une os conjuntos
+  #adiciona o (primeiro elemento, segundo elemento, peso) a lista da mst
+  #adiciona o peso ao mst_weight
+  #verifica se o tamanho de mst eh igual ao numero de vertices - 1, caso verdadeiro pare
+#retorna o mst_weight

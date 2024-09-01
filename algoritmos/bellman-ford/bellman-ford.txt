@@ -1,0 +1,37 @@
+Encontrar as menores distâncias de um vértice de origem para todos os outros vértices em um grafo.
+
+
+def bellman_ford(grafo, num_vertices, inicio):
+  distancia = [float('inf')] * num_vertices
+  distancia[inicio] = 0
+
+  for _ in range(num_vertices-1):
+    for u, v, peso in grafo:
+      if distancia[u] != float('inf') and distancia[u] + peso < distancia[v]:
+        distancia[v] = distancia[u] + peso
+  #verificacao de ciclo negativo
+  for u, v, peso in grafo:
+    if distancia[u] != float('inf') and distancia[u] + peso < distancia[v]: 
+      print("o grafo contem um ciclo de peso negativo")
+      return None
+  return distancia
+
+#inicializacao
+comeca recebendo as arestas, o comeco e o numero de vertices
+inicializa uma variavel distancia, com [infinitos] * numero de vertices para manter controle da distancia
+define distancia[inicio] valendo 0 (0 pois a distancia entre o inicio comeca 0)
+#relaxamento
+relaxa as arestas no loop for que vai ate o numero de vertices - 1
+  #relaxar significa verificar se eh possivel encontrar um caminho mais curto para um vertice passando por outro vertice e atualizando a distancia
+  iterar sobre elemento1, elemento2 e o peso da conexao com um loop for no grafo
+    verificar se a distancia[elemento1] eh diferente de infinito e se distancia[elemento1] + peso < distancia[elemento2] 
+      caso verdadeiro, define a distancia[elemento2] como distancia[elemento1] + peso
+#verificacao de ciclo negativo
+itera sobre elemento1, elemento2 e peso dentro de grafo por meio de um for
+verifica o mesmo que no for do relaxamento, pois se ainda eh possivel relaxar uma aresta depois do processo de relaxamento ela so pode ser negativa
+
+passo a passo:
+1-inicializacao dos infinitos
+2-relaxamento das arestas
+3-verificacao do ciclo negativo
+4-retorno das distancias

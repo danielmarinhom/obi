@@ -1,0 +1,33 @@
+#adequado para exercicios que envolvem a exploracao completa de um componente em um grafo, explorar todas as possibilidades em um percurso
+#usado para explorar profundamente um ramo do grafo
+
+def dfs(grafo, inicial):
+    pilha = [inicial]
+    visitados = []
+    while pilha:
+        atual = stack.pop()
+        if atual not in visitados:
+            visitados.append(atual)
+            for vizinho in grafo[atual]
+                if vizinho not in visited:
+                    pilha.append(vizinho)
+    return visitados
+
+passo a passo:
+1-comeca recebendo um grafo e uma posicao inicial
+2-define a pilha como uma lista contendo a posicao inicial
+3-define visitados como uma lista vazia
+4-cria um loop while para enquanto a pilha nao for vazia
+5-define atual como o ultimo elemento removido da pilha
+6-verifica se o atual nao esta nos visitados, caso verdadeiro, adiciona o atual nos visitados, roda um for para os vizinhos do atual, verifica se cada vizinho nao esta nos visitados, caso verdadeiro, adiciona o vizinho a pilha
+7-retorna os visitados
+
+
+
+#OBS: caso o exercicio diga que as conexoes entre vertices podem ser bilaterais, pode ser util:
+for _ in range(c):
+  u, v = map(int, input().split())
+  graph[u].append(v)
+  graph[v].append(u)
+ 
+
