@@ -1,5 +1,6 @@
+import time
+start = time.time()
 n = int(input())
-
 grafo = []
 for i in range(n):
   grafo.append(list(map(int, input().split())))
@@ -25,4 +26,5 @@ def bfs(grafo, n):
           stack.append((nx, ny,qtd))
   return 0
 print(bfs(grafo, n))
-    
+end = time.time()
+print(f'{end-start:.7f} segundos')    
