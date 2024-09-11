@@ -1,0 +1,46 @@
+Exercício 1: Matriz de Espiral
+Descrição:
+Dada uma matriz 
+𝑛
+×
+𝑛
+n×n com números inteiros, escreva um programa que percorra a matriz em forma de espiral, começando do canto superior esquerdo e movendo-se para a direita.
+
+Entrada:
+
+A primeira linha contém um número inteiro 
+𝑛
+n (1 ≤ 
+𝑛
+n ≤ 100), o tamanho da matriz.
+As próximas 
+𝑛
+n linhas contêm 
+𝑛
+n inteiros cada uma, representando a matriz.
+Saída:
+
+Uma única linha contendo os elementos da matriz percorridos em espiral.
+Exemplo 1:
+
+Entrada:
+
+3
+1 2 3
+4 5 6
+7 8 9
+Saída:
+
+1 2 3 6 9 8 7 4 5
+Exemplo 2:
+
+Entrada:
+
+4
+1 2 3 4
+5 6 7 8
+9 10 11 12
+13 14 15 16
+Saída:
+
+1 2 3 4 8 12 16 15 14 13 9 5 6 7 11 10

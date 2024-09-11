@@ -1,0 +1,1 @@
+Binary lifting envolve pré-calcular e armazenar informações sobre ancestrais de cada nó em diferentes distâncias que são potências de 2 (1, 2, 4, 8, etc.). Isso permite que possamos "pular" grandes distâncias na árvore de maneira eficiente, o que é muito útil para encontrar o LCA.

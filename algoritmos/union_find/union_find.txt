@@ -1,0 +1,29 @@
+#verifica ciclo no caso de duas arestas ja pertencerem ao mesmo conjunto
+#verifica conexao entre vertices
+
+parent = [i for i in range(size)]
+
+def find(x):
+    if parent[x] != x:
+        parent[x] = find(parent[x])
+    return parent[x]
+
+def union(a,b):
+    rootA = find(a)
+    rootB = find(b)
+    if rootA != rootB:
+        if rootA > rootB:
+            parent[rootB] = rootA
+        else:
+            parent[rootA] = rootB
+
+#define uma variavel para manter controle sobre a hierarquia dos vertices que tem o tamanho do grafo, o pai de i -> parent[i]
+#funcao find:
+#passa um elemento x como parametro
+#verifica se x nao eh pai dele mesmo, caso verdadeiro, ele acha o pai dele por meio de recursao ate o novo x se tornar o pai dele mesmo, e quando acontecer, retorna esse valor
+#funcao union:
+#passa dois elementos como parametro, A e B
+#define a raiz (os pais) de A e B
+#verifica se a raiz deles sao diferentes, caso verdadeiro:
+  #verifica se a raiz de A > raiz de B, caso verdadeiro: o pai de raiz B = raiz de A
+  #verifica se a raiz de A < raiz de B, caso verdadeiro: o pai de raiz A = raiz de B

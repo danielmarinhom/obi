@@ -1,0 +1,11 @@
+algoritmo relacionado a busca de padroes em strings quando se lida com buscas multiplas ou de grandes textos
+usado em problemas de similaridade, deteccao de cadeia de dna ou ate verificacao de palindromos
+seu funcionamento se da com calculos de hash 
+
+cuidado:
+-colisoes de hash, eh importante implementar uma verificacao de caracteres apos encontrar um hash coincidente
+
+passo a passo:
+1-definicao do tamanho do padrao, do texto, dos numeros de caracteres do ascii, de um numero palindromos, uma variavel para armazenar o hash do texto e outra para o do padrao
+2-itera sobre m-1 e calcula a contribuicao atual da janela do caractere atual, usado na fórmula de hash para subtrair o efeito do caractere mais à esquerda quando a janela deslizante avança
+3-roda um for do tamanho de m que calcula os hashes iniciais tanto do padrao quanto da primeira substring do texto de comprimento m

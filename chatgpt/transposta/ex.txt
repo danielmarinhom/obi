@@ -1,0 +1,54 @@
+Exercício 5: Matriz de Transposta
+Descrição:
+Dada uma matriz 
+𝑛
+×
+𝑚
+n×m com números inteiros, escreva um programa que encontre a transposta da matriz.
+
+Entrada:
+
+A primeira linha contém dois inteiros 
+𝑛
+n e 
+𝑚
+m (1 ≤ 
+𝑛
+,
+𝑚
+n,m ≤ 100), o tamanho da matriz.
+As próximas 
+𝑛
+n linhas contêm 
+𝑚
+m inteiros cada uma, representando a matriz.
+Saída:
+
+𝑚
+m linhas contendo 
+𝑛
+n inteiros cada uma, representando a matriz transposta.
+Exemplo 1:
+
+Entrada:
+
+2 3
+1 2 3
+4 5 6
+Saída:
+
+1 4
+2 5
+3 6
+Exemplo 2:
+
+Entrada:
+
+3 2
+1 4
+2 5
+3 6
+Saída:
+
+1 2 3
+4 5 6

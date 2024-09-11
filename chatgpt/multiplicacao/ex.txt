@@ -1,0 +1,80 @@
+Exercício 4: Multiplicação de Matrizes
+Descrição:
+Dadas duas matrizes 
+𝑛
+×
+𝑚
+n×m e 
+𝑚
+×
+𝑝
+m×p com números inteiros, escreva um programa que calcule a matriz resultante da multiplicação dessas duas matrizes.
+
+Entrada:
+
+A primeira linha contém dois inteiros 
+𝑛
+n e 
+𝑚
+m (1 ≤ 
+𝑛
+,
+𝑚
+n,m ≤ 100), o tamanho da primeira matriz.
+As próximas 
+𝑛
+n linhas contêm 
+𝑚
+m inteiros cada uma, representando a primeira matriz.
+A linha seguinte contém dois inteiros 
+𝑚
+m e 
+𝑝
+p (1 ≤ 
+𝑚
+,
+𝑝
+m,p ≤ 100), o tamanho da segunda matriz.
+As próximas 
+𝑚
+m linhas contêm 
+𝑝
+p inteiros cada uma, representando a segunda matriz.
+Saída:
+
+𝑛
+n linhas contendo 
+𝑝
+p inteiros cada uma, representando a matriz resultante da multiplicação.
+Exemplo 1:
+
+Entrada:
+t
+
+2 3
+1 2 3
+4 5 6
+3 2
+7 8
+9 10
+11 12
+Saída:
+
+58 64
+139 154
+Exemplo 2:
+
+Entrada:
+
+3 2
+1 4
+2 5
+3 6
+2 3
+7 8 9
+10 11 12
+Saída:
+
+47 52 57
+64 71 78
+81 90 99

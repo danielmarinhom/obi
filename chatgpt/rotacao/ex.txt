@@ -1,0 +1,54 @@
+Exercício 3: Rotação da Matriz
+Descrição:
+Dada uma matriz 
+𝑛
+×
+𝑛
+n×n com números inteiros, escreva um programa que rotacione a matriz 90 graus no sentido horário.
+
+Entrada:
+
+A primeira linha contém um número inteiro 
+𝑛
+n (1 ≤ 
+𝑛
+n ≤ 100), o tamanho da matriz.
+As próximas 
+𝑛
+n linhas contêm 
+𝑛
+n inteiros cada uma, representando a matriz.
+Saída:
+
+𝑛
+n linhas contendo 
+𝑛
+n inteiros cada uma, representando a matriz rotacionada.
+Exemplo 1:
+
+Entrada:
+
+3
+1 2 3
+4 5 6
+7 8 9
+Saída:
+
+7 4 1
+8 5 2
+9 6 3
+Exemplo 2:
+
+Entrada:
+
+4
+1 2 3 4
+5 6 7 8
+9 10 11 12
+13 14 15 16
+Saída:
+
+13 9 5 1
+14 10 6 2
+15 11 7 3
+16 12 8 4

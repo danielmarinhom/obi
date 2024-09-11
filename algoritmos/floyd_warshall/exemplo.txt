@@ -1,0 +1,10 @@
+Você é responsável pela manutenção de uma rede de computadores que está distribuída em vários escritórios. Os computadores são conectados entre si por cabos de rede, e cada cabo tem um tempo de transmissão associado, que representa o tempo necessário para transmitir dados de um computador a outro.
+
+Seu objetivo é calcular o menor tempo de transmissão entre todos os pares de computadores na rede.
+
+A entrada consiste em:
+Um inteiro N (2 ≤ N ≤ 100), o número de computadores na rede.
+Um inteiro M (2 <= M <= 1000), o numero de conexoes entre os computadores
+M linhas, ada uma contendo tres inteiros u,v,t, indicando que ha um conexao entre u e v com tempo tamanho
+
+Para cada par de computadores (u, v), imprima o menor tempo de transmissão. Se não houver um caminho entre os computadores, imprima "INF".

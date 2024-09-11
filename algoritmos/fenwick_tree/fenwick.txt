@@ -1,0 +1,4 @@
+binary indexed tree permite operacoes eficientes de soma e atualizacoes de elementos em um array
+-calcular somas prefixadas de elementos, atualizar elementos, manter os calculos eficientes
+operacoes suportadas: construcao da arvore, atualizacao de um valor do array, calcular a soma dos primeiros k elementos
+

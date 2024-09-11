@@ -1,0 +1,1 @@
+#diferenca de peso maximo = 8u - > P-Q<=8, mais pesada-mais leve
