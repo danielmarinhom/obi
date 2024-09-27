@@ -8,6 +8,10 @@
         "limits": "cpp",
         "semaphore": "cpp",
         "valarray": "cpp",
-        "algorithm": "cpp"
-    }
+        "algorithm": "cpp",
+        "cmath": "cpp",
+        "tuple": "cpp",
+        "numbers": "cpp"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }
