@@ -1,0 +1,66 @@
+Fundamentos de Análise de Algoritmos:
+[PJ] Conceito de algoritmo (invariantes, pré e pós-condição)
+[PJ] Análise assintótica de complexidade (Big O, classes de complexidade)
+[PJ] Análise amortizada (informal)
+
+Estratégias de Algoritmos:
+[PJ] Força bruta (busca exaustiva)
+[PJ] Algoritmos gulosos (com prova de corretude)
+[PJ] Divisão-e-conquista (exemplo: Merge Sort)
+[PJ] Backtracking simples (recursão exaustiva)
+[P1] Backtracking com podas (exemplo: solução do problema da rainha)
+[P1] Programação dinâmica (otimizações usando memória e reuso de subproblemas)
+
+Estruturas de Dados:
+[PJ] Vetores de frequências (histogramas)
+[PJ] Somas prefixo/sufixo
+[PJ] Conjuntos (Set) e Dicionários (Map)
+[PJ] Fila de prioridades (Heap)
+[P1] Union-Find (com pressões de caminho e união por tamanho)
+[P2] Sparse Table
+[P2] Fenwick Tree (BIT)
+[P2] Segment Tree (incluindo Lazy Propagation)
+[P2] Trie (Árvore de Prefixos)
+
+Algoritmos de Ordenação e Busca:
+[PJ] Busca binária
+[PJ] Busca binária na resposta
+[P2] Meet-in-the-Middle
+
+Algoritmos de Matemática:
+[PJ] Máximo divisor comum (Algoritmo de Euclides)
+[PJ] Crivo de Eratóstenes
+[P1] Exponenciação rápida
+[P1] Minimax (otimização em jogos)
+
+Algoritmos de Programação Dinâmica:
+[P1] Problema da Mochila
+[P1] Maior Subsequência Comum (LCS)
+[P1] Distância de Edição
+[P1] Maior Subsequência Crescente em O(N log N)
+[P2] Programação dinâmica com máscara de bits (ex: caminho Hamiltoniano)
+
+Algoritmos em Grafos:
+[PJ] DFS (Busca em Profundidade) e BFS (Busca em Largura)
+[P1] Dijkstra (menor caminho)
+[P1] Árvore Geradora Mínima (Prim, Kruskal)
+[P1] Ordenação Topológica
+[P2] Componentes fortemente conexas (Kosaraju/Tarjan)
+[P2] Tarjan para Pontes e Articulações
+[P2] Caminho de Euler
+
+Algoritmos em Árvores:
+[P1] Diâmetro e Centro de Árvores
+[P2] Binary Lifting e LCA (Lowest Common Ancestor)
+[P2] Euler Tour Technique
+[P2] Tree Rerooting (Dinâmica de programação em árvores)
+
+Algoritmos de Geometria:
+[P2] Fecho Convexo (Convex Hull)
+[P2] Produto Escalar e Vetorial
+[P2] Técnicas de Varredura (Line Sweep)
+
+Algoritmos de Análise de Strings:
+[P1] Knuth-Morris-Pratt (KMP)
+[P1] Rabin-Karp
+[P2] Z-Algorithm

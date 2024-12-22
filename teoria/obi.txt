@@ -1,0 +1,66 @@
+distancias euclidianas
+ordem lexicografica
+casa dos pombos
+teoria dos jogos
+triangulo de pascal
+coeficientes binomiais
+principio inclusao-exclusao
+lema do aperto de mao
+binary shifts
+crivo de eratostenes
+
+bruteforce
+greedy
+divide-and-conquer
+backtracking
+dp:
+- knapsack
+- analise combinatoria
+- kadane
+- longest common subsequence LCS
+- longest increasing subsequences
+- edit distance
+- matrix chain multiplication
+- grafos direcionados aciclicos . ex: longest path problem
+- bits mask
+meet-in-the-middle
+two pointers
+binary search
+
+
+binary heap
+linked list
+sparse table
+range minimum query
+decomposicao raiz(n) simples
+fenwick tree
+segment tree: lazy propagation & merge sort tree
+trie
+minimax
+dfs:
+-tarjan (SCC, articulation points)
+-bipartition
+-euler cicle
+-flood fill
+kahn
+small-to-large
+tree rerooting
+euler tour technique
+centroide de arvore em o(n)
+binary lifting (LCA)
+grafos funcionais (decomposicao em ciclos e arvores)
+diamentro de centro de arvore em o(n)
+aumentacao de subarvores em arvores enraizadas (por exemplo calcular o tamanho mais distante para cada subarvore)
+
+
+Representação de vetores, retas e segmentos de reta
+Compressão de coordenadas
+Produto escalar e vetorial, incluindo aplicações:
+-Checar se três pontos são colineares
+-Testar se dois vetores são paralelos/ortogonais
+-Calcular sentido do ângulo entre dois vetores
+Interseção de duas retas
+Técnicas de Varredura (Line Sweep, Radial Sweep)
+Fecho Convexo (Convex Hull) em O(N log N)
+Área de polígono em O(N) (Fórmula do Cadarço ou equivalente)
+Checar se um ponto está em um polígono em O(N) (Ray Casting ou equivalente)
