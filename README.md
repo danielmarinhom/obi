@@ -1,3 +1,3 @@
 # obi
 
-algoritmos e exercicios que usei para estudar para a olimpiada brasileira de informatica 
+algorithms and exercises used to study competitive programming for brazilian informatics olympiad  
